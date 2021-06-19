@@ -16,12 +16,12 @@ module.exports = {
         'screen-1/2': '50vw',
       },
       transitionDelay: {
-        '1500': '1500ms',
+        [`1500`]: '1500ms',
       },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }

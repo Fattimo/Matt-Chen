@@ -1,30 +1,6 @@
 <template>
   <div id="title" class="w-screen-1/2 bg-indigo-300">
     <div id="background-wrapper" class="absolute">
-      <!-- <div
-        class="
-          absolute
-          inset-0
-          max-h-screen
-          min-h-screen
-          flex-center
-          w-screen-1/2
-          overflow-hidden
-          transform
-          duration-500
-        "
-      >
-        <img
-          class="
-            object-cover
-            min-w-full min-h-full
-            max-w-none
-            flex-shrink-0
-            opacity-10
-          "
-          src="~/assets/images/text_background.png"
-        />
-      </div> -->
       <div
         class="
           absolute
@@ -37,12 +13,11 @@
           transform
           duration-1000
         "
-        :class="opacityTransform"
       >
         <img
           class="object-cover min-w-full min-h-full max-w-none flex-shrink-0"
-          style="height: 800px"
-          src="~/assets/images/me.jpg"
+          style="height: 0px"
+          :src="require(`~/assets/images/${imgSlug}`)"
         />
       </div>
       <div class="relative text-white text-center">
@@ -58,7 +33,6 @@
             origin-left
             duration-700
           "
-          :class="slideXTransform"
         >
           {{ header.title || '1. About Me' }}
         </h1>
@@ -76,7 +50,6 @@
             origin-top
             duration-500
           "
-          :class="slideYTransform"
         >
           {{ header.description || 'its just happy' }}
         </p>
@@ -88,28 +61,17 @@
 <script>
 export default {
   props: {
-    page: {
-      type: Number,
-      default: 0,
-    },
     header: {
       type: Object,
       default: () => {},
     },
-    active: {
-      type: Boolean,
-      default: false,
-    },
   },
   computed: {
-    slideXTransform() {
-      return this.active ? 'delay-1000' : 'scale-x-0 delay-500'
-    },
-    slideYTransform() {
-      return this.active ? 'delay-1500' : '-translate-y-1 scale-y-0'
-    },
-    opacityTransform() {
-      return this.active ? 'delay-1000' : 'opacity-0'
+    imgSlug() {
+      if (this.header.img === undefined) {
+        return 'me.jpg'
+      }
+      return this.header.img
     },
   },
 }

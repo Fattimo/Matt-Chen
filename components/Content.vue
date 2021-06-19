@@ -1,21 +1,44 @@
 <template>
   <div class="container">
     <div id="wrapper" class="flex flex-grow">
-      <TitleCarousel :page="page" :headers="pageHeaders" />
+      <!-- <TitleCarousel :page="page" :headers="pageHeaders" /> -->
+      <div class="w-screen-1/2 z-10">
+        <div
+          class="duration-500 ease-out"
+          style="height: 150vh"
+          :style="pageTranslationY"
+        >
+          <div class="half-screen-content bg-red-300">
+            <TitleCarouselSlide :header="pageHeaders[0]" />
+          </div>
+          <div class="half-screen-content bg-pink-300">
+            <TitleCarouselSlide :header="pageHeaders[1]" />
+          </div>
+          <div class="half-screen-content bg-yellow-300">
+            <TitleCarouselSlide :header="pageHeaders[2]" />
+          </div>
+        </div>
+      </div>
       <div class="w-screen-1/2 z-0">
         <div
-          class="inline-flex delay-500 duration-700 ease-out"
+          class="inline-flex duration-500 ease-out"
           style="width: 150vw"
-          :style="pageTranslation"
+          :style="pageTranslationX"
         >
-          <div class="half-screen-content bg-indigo-300">
-            <nuxt-content :document="pageContents[0]" />
+          <div class="half-screen-content bg-indigo-300 pt-32 px-8">
+            <article class="prose">
+              <nuxt-content :document="pageContents[0]" />
+            </article>
           </div>
-          <div class="half-screen-content bg-green-300">
-            <nuxt-content :document="pageContents[1]" />
+          <div class="half-screen-content bg-green-300 pt-32 px-8">
+            <article class="prose">
+              <nuxt-content :document="pageContents[1]" />
+            </article>
           </div>
-          <div class="half-screen-content bg-blue-300">
-            <nuxt-content :document="pageContents[2]" />
+          <div class="half-screen-content bg-blue-300 pt-32 px-8">
+            <article class="prose">
+              <nuxt-content :document="pageContents[2]" />
+            </article>
           </div>
         </div>
       </div>
@@ -36,12 +59,19 @@ export default {
     },
   },
   computed: {
-    pageTranslation() {
+    pageTranslationX() {
       return `transform:translate(-${50 * this.page}vw, 0px)`
+    },
+    pageTranslationY() {
+      return `transform:translate(0px, -${100 * this.page}vh)`
     },
     pageHeaders() {
       return this.pageContents.map((page) => {
-        return { title: page.title, description: page.description }
+        return {
+          title: page.title,
+          description: page.description,
+          img: page.img,
+        }
       })
     },
   },
@@ -50,11 +80,11 @@ export default {
 
 <style>
 .container {
-  @apply min-h-screen flex flex-col justify-center items-center text-center mx-auto overflow-x-hidden;
+  @apply max-h-screen text-center mx-auto overflow-hidden;
 }
 
 .half-screen-content {
-  @apply w-screen-1/2 flex-col min-h-screen pt-32;
+  @apply w-screen-1/2 flex-col min-h-screen text-left;
 }
 
 .flex-center {

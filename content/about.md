@@ -1,6 +1,7 @@
 ---
 title: About Me
 description: 'idk matt chen yay'
+img: me.jpg
 ---
 # Hello! My name is Matt...
 
