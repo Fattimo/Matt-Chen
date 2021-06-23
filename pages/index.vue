@@ -1,9 +1,8 @@
 <template>
-  <Header>
-    <template #default="{ page }">
-      <Content :page="page" :page-contents="pageContents" />
-    </template>
-  </Header>
+  <div>
+    <Header :page="page" />
+    <router-view :page="page" :page-contents="pageContents" />
+  </div>
 </template>
 
 <script>
@@ -15,6 +14,18 @@ export default {
       $content('contact').fetch(),
     ])
     return { pageContents }
+  },
+  computed: {
+    page() {
+      switch (this.$route.path) {
+        case '/works':
+          return 1
+        case '/contact':
+          return 2
+        default:
+          return 0
+      }
+    },
   },
 }
 </script>
