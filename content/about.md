@@ -7,4 +7,11 @@ img: me.jpg
 
 Welcome to my website! I'm a current student at the Georgia Institute of Technology.
 
-A toggle goes here between recruiter mode and personal mode
+<about-me-toggler>
+  <template #personal>
+    <p>Personal</p>
+  </template>
+  <template #recruiter>
+    <p>*Recruiter*</p>
+  </template>
+</about-me-toggler>
