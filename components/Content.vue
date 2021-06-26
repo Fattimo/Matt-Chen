@@ -8,17 +8,17 @@
       <div class="half-screen-content bg-red-300">
         <TitleCarouselSlide :header="pageHeaders[0]" />
       </div>
-      <div class="half-screen-content bg-indigo-300 pt-32 px-8">
+      <div class="half-screen-content bg-indigo-300 pt-32 px-12">
         <article class="prose">
           <nuxt-content :document="pageContents[0]" />
         </article>
       </div>
-      <div class="half-screen-content bg-green-300 pt-32 px-8">
+      <div class="half-screen-content bg-green-300 pt-32 px-12">
         <article class="prose">
           <nuxt-content :document="pageContents[1]" />
         </article>
       </div>
-      <div class="half-screen-content bg-blue-300 pt-32 px-8">
+      <div class="half-screen-content bg-blue-300 pt-32 px-12">
         <article class="prose">
           <nuxt-content :document="pageContents[2]" />
         </article>

@@ -32,7 +32,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     // https://github.com/nuxt-community/router-module
-    '@nuxtjs/router',
+    ['@nuxtjs/router', { keepDefaultRouter: true }],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

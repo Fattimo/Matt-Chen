@@ -1,18 +1,26 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import MyPage from '~/pages/index.vue'
+import HomePage from '~/pages/index.vue'
 import Content from '~/components/Content.vue'
 
 Vue.use(Router)
 
-export function createRouter() {
+export function createRouter(
+  ssrContext,
+  createDefaultRouter,
+  routerOptions,
+  config
+) {
+  const options =
+    routerOptions || createDefaultRouter(ssrContext, config).options
+
   return new Router({
-    mode: 'history',
+    ...options,
     routes: [
       {
         path: '/',
-        component: MyPage,
+        component: HomePage,
         children: [
           {
             path: 'about',
@@ -32,6 +40,12 @@ export function createRouter() {
           },
         ],
       },
+      ...fixRoutes(options.routes),
     ],
   })
+}
+
+function fixRoutes(defaultRoutes) {
+  // default routes that come from `pages/`
+  return defaultRoutes.filter((route) => !(route.path === '/'))
 }

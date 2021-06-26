@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header :page="page" />
-    <router-view :page="page" :page-contents="pageContents" />
+    <nuxt-child :page="page" :page-contents="pageContents" />
   </div>
 </template>
 
