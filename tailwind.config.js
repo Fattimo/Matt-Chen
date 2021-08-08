@@ -14,9 +14,30 @@ module.exports = {
     extend: {
       width: {
         'screen-1/2': '50vw',
+        120: '30rem',
+        160: '35rem',
+        200: '40rem',
+        240: '45rem',
+        280: '50rem',
+        320: '55rem',
+      },
+      height: {
+        120: '30rem',
+        160: '35rem',
+        200: '40rem',
+        240: '45rem',
+        280: '50rem',
+        320: '55rem',
+      },
+      borderWidth: {
+        100: '10rem',
+        200: '200px',
       },
       transitionDelay: {
         [`1500`]: '1500ms',
+      },
+      animation: {
+        'spin-slow': 'spin 40s linear infinite',
       },
     },
   },

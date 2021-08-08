@@ -3,15 +3,21 @@ title: About Me
 description: 'idk matt chen yay'
 img: me.jpg
 ---
-# Hello! My name is Matt...
-
-Welcome to my website! I'm a current student at the Georgia Institute of Technology.
-
-<about-me-toggler>
+# About Me
+<about-toggler>
   <template #personal>
-    <p>Personal</p>
+<about-content>
+  <template #header>Introduction</template>
+  <template #body>
+
+WEE WOO WEE WOO
+
+  </template>
+</about-content>
   </template>
   <template #recruiter>
-    <p>*Recruiter*</p>
+
+*Recruiter*
+
   </template>
-</about-me-toggler>
+</about-toggler>

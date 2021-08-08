@@ -3,7 +3,23 @@ title: Contact Me
 description: 'I want to hear from you!!'
 img: contact.jpg
 ---
+# Contact Me
 
-In case you want to have a conversation with me, you can always reach me at my email or connect with me on LinkedIn! Otherwise, feel free to use this handy dandy form that I've made here:
+If you ever want to reach out to me, the best way to do so through email or this form below! 
+ 
+For professional inquiries, LinkedIn should be ok as well, but I don’t keep up with my inbox too much.
 
-Form component goes here
+<contact-form></contact-form>
+
+<about-content>
+  <template #header>Socials</template>
+  <template #body>
+
+I’m not really the type to keep up with social media, but here’s an array of links for your enjoyment anyways. Maybe when I become a super-influencer one day. 
+
+Regardless, feel free to try getting in touch through some of these, but the form above will be your best bet. 
+
+  </template>
+</about-content>
+
+<contact-socials></contact-socials>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-full">
+  <div class="flex w-full mb-4">
     <!-- https://codepen.io/lhermann/pen/EBGZRZ -->
     <label
       for="toggleB"

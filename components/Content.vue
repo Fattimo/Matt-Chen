@@ -1,26 +1,37 @@
 <template>
-  <div class="container">
+  <div class="max-h-screen w-screen text-center overflow-hidden flex">
     <div
       class="inline-flex duration-500 ease-out"
-      style="width: 200vw"
+      style="width: 300vw"
       :style="pageTranslationX"
     >
-      <div class="half-screen-content bg-red-300">
-        <TitleCarouselSlide :header="pageHeaders[0]" />
+      <div class="w-screen bg-red-300 z-20">
+        <LandingPage />
       </div>
-      <div class="half-screen-content bg-indigo-300 pt-32 px-12">
-        <article class="prose">
-          <nuxt-content :document="pageContents[0]" />
+      <div
+        key="portfolio.title"
+        class="
+          half-screen-content
+          bg-indigo-300
+          pt-32
+          pb-12
+          z-10
+          relative
+          overflow-x-hidden
+        "
+      >
+        <CirclePortfolio />
+        <article class="prose prose-lg z-20 px-12">
+          <nuxt-content :document="portfolio" />
         </article>
       </div>
-      <div class="half-screen-content bg-green-300 pt-32 px-12">
-        <article class="prose">
-          <nuxt-content :document="pageContents[1]" />
-        </article>
-      </div>
-      <div class="half-screen-content bg-blue-300 pt-32 px-12">
-        <article class="prose">
-          <nuxt-content :document="pageContents[2]" />
+      <div
+        v-for="content in pageContents"
+        :key="content.title"
+        class="half-screen-content bg-indigo-300 pt-32 px-12 pb-12 z-10"
+      >
+        <article class="prose prose-lg">
+          <nuxt-content :document="content" />
         </article>
       </div>
     </div>
@@ -38,31 +49,24 @@ export default {
       type: Array,
       default: () => [],
     },
+    portfolio: {
+      type: Object,
+      default: () => {},
+    },
   },
   computed: {
     pageTranslationX() {
-      return `transform:translate(-${50 * this.page}vw, 0px)`
-    },
-    pageHeaders() {
-      return this.pageContents.map((page) => {
-        return {
-          title: page.title,
-          description: page.description,
-          img: page.img,
-        }
-      })
+      return this.page > 0
+        ? `transform:translate(-${50 * this.page + 50}vw, 0px)`
+        : ''
     },
   },
 }
 </script>
 
 <style>
-.container {
-  @apply max-h-screen text-center mx-auto overflow-hidden flex;
-}
-
 .half-screen-content {
-  @apply w-screen-1/2 flex-col min-h-screen text-left;
+  @apply w-screen-1/2 flex-col min-h-screen text-left overflow-auto;
 }
 
 .flex-center {
