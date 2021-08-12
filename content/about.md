@@ -1,7 +1,8 @@
 ---
 title: About Me
 description: 'idk matt chen yay'
-img: me.jpg
+color: "primary"
+font: "light"
 ---
 # About Me
 <about-toggler>

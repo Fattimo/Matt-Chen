@@ -11,5 +11,17 @@
       rounded-full
       z-10
     "
+    :class="color"
   />
 </template>
+
+<script>
+export default {
+  props: {
+    color: {
+      type: String,
+      default: 'border-secondary',
+    },
+  },
+}
+</script>

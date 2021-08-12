@@ -1,7 +1,8 @@
 ---
 title: Contact Me
 description: 'I want to hear from you!!'
-img: contact.jpg
+color: "light"
+font: "primary"
 ---
 # Contact Me
 

@@ -5,32 +5,29 @@
       style="width: 300vw"
       :style="pageTranslationX"
     >
-      <div class="w-screen bg-red-300 z-20">
+      <div class="w-screen bg-light z-20">
         <LandingPage />
       </div>
       <div
-        key="portfolio.title"
-        class="
-          half-screen-content
-          bg-indigo-300
-          pt-32
-          pb-12
-          z-10
-          relative
-          overflow-x-hidden
-        "
+        :key="portfolio.title"
+        class="half-screen-content pt-32 pb-12 z-10 relative overflow-x-hidden"
+        :class="getBgColor(portfolio.color)"
       >
         <CirclePortfolio />
-        <article class="prose prose-lg z-20 px-12">
+        <article
+          class="prose prose-lg z-20 px-12"
+          :class="getTextColor(portfolio.font)"
+        >
           <nuxt-content :document="portfolio" />
         </article>
       </div>
       <div
         v-for="content in pageContents"
         :key="content.title"
-        class="half-screen-content bg-indigo-300 pt-32 px-12 pb-12 z-10"
+        class="half-screen-content pt-32 px-12 pb-12 z-10"
+        :class="getBgColor(content.color)"
       >
-        <article class="prose prose-lg">
+        <article class="prose prose-lg" :class="getTextColor(content.font)">
           <nuxt-content :document="content" />
         </article>
       </div>
@@ -59,6 +56,32 @@ export default {
       return this.page > 0
         ? `transform:translate(-${50 * this.page + 50}vw, 0px)`
         : ''
+    },
+  },
+  methods: {
+    getBgColor(color) {
+      switch (color) {
+        case 'primary':
+          return 'bg-primary'
+        case 'secondary':
+          return 'bg-secondary'
+        case 'light':
+          return 'bg-light'
+        default:
+          return 'bg-dark'
+      }
+    },
+    getTextColor(color) {
+      switch (color) {
+        case 'primary':
+          return 'prose-primary'
+        case 'secondary':
+          return 'prose-secondary'
+        case 'light':
+          return 'prose-light'
+        default:
+          return 'prose-dark'
+      }
     },
   },
 }

@@ -1,7 +1,7 @@
 ---
 title: My Works Nav
 description: "All the stuff Ive made"
-img: me_comp.jpg
+color: "light"
 works:
   - name: Pass the Aux
     img: me_comp.jpg

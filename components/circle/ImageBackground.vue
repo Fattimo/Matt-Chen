@@ -11,6 +11,7 @@
       rounded-full
       flex-center
       z-10
+      border-primary
     "
   />
 </template>

@@ -1,6 +1,8 @@
 ---
 title: My Works Extended
 description: "All the stuff Ive made"
+color: "dark"
+font: "light"
 ---
 <works-snippet name="passaux" img="me_comp.jpg">
   <template #header>

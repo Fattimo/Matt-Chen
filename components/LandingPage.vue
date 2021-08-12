@@ -42,10 +42,20 @@
             I like to make <br />
             full-stack web apps<br />
             <br />
-            Click here to learn more!
+            <span @click="nextPage()">Click here to learn more!</span>
           </p>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    nextPage() {
+      this.$router.push('works')
+    },
+  },
+}
+</script>
