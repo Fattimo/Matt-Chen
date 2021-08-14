@@ -1,6 +1,7 @@
 <template>
   <div
     class="
+      absolute
       2xl:w-280
       2xl:h-280
       lg:w-320

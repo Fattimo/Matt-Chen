@@ -50,6 +50,8 @@ module.exports = {
         240: '45rem',
         280: '50rem',
         320: '55rem',
+        360: '60rem',
+        480: '75rem',
       },
       height: {
         120: '30rem',
@@ -58,6 +60,8 @@ module.exports = {
         240: '45rem',
         280: '50rem',
         320: '55rem',
+        360: '60rem',
+        480: '75rem',
       },
       borderWidth: {
         100: '10rem',

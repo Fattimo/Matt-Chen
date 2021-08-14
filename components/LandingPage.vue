@@ -24,7 +24,7 @@
         class="
           absolute
           inset-y-0
-          left-12
+          right-48
           my-auto
           overflow-hidden
           flex
@@ -33,7 +33,9 @@
         "
       >
         <CircleLarge />
-        <CircleRotatingText>Hello I'm Matt!!</CircleRotatingText>
+        <CircleRotatingText color="primary"
+          >Hello I'm Matt!!</CircleRotatingText
+        >
       </div>
       <div class="absolute inset-y-0 left-64 z-30 h-screen flex items-center">
         <div class="text-left font-heading">

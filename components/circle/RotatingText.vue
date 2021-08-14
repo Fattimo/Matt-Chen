@@ -1,5 +1,8 @@
 <template>
-  <div class="absolute 2xl:w-280 2xl:h-280 lg:w-320 lg:h-320 z-10 font-heading">
+  <div
+    class="2xl:w-280 2xl:h-280 lg:w-480 lg:h-480 z-10 font-heading"
+    :class="fontColor"
+  >
     <svg viewBox="0 0 200 200" class="animate-spin-slow">
       <path
         id="curve"
@@ -11,7 +14,7 @@
           a 75,75 0 0,1 -150,0
         "
       />
-      <text width="200">
+      <text width="200" class="fill-current">
         <textPath alignment-baseline="top" xlink:href="#curve">
           <slot />
         </textPath>
@@ -19,3 +22,19 @@
     </svg>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    color: {
+      type: String,
+      default: 'secondary',
+    },
+  },
+  computed: {
+    fontColor() {
+      return this.color === 'secondary' ? 'text-secondary' : 'text-primary'
+    },
+  },
+}
+</script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex absolute z-40">
+    <div class="flex absolute z-40 font-heading">
       <div class="inline w-screen-1/2 p-16" @click="setPage('/')">
         MATT CHEN NUMBER {{ page }}
       </div>
