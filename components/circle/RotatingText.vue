@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute 2xl:w-280 2xl:h-280 lg:w-320 lg:h-320 z-10">
+  <div class="absolute 2xl:w-280 2xl:h-280 lg:w-320 lg:h-320 z-10 font-heading">
     <svg viewBox="0 0 200 200" class="animate-spin-slow">
       <path
         id="curve"

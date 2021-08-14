@@ -35,8 +35,8 @@
         <CircleLarge />
         <CircleRotatingText>Hello I'm Matt!!</CircleRotatingText>
       </div>
-      <div class="absolute inset-y-0 left-80 z-30 h-screen flex items-center">
-        <div class="text-left">
+      <div class="absolute inset-y-0 left-64 z-30 h-screen flex items-center">
+        <div class="text-left font-heading">
           <h1 class="text-7xl p-2 m-1 w-max">Hello!! <br />I'm Matt</h1>
           <p class="p-2 m-1 w-max text-3xl">
             I like to make <br />

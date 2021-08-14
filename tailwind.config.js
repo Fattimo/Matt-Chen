@@ -11,6 +11,10 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      heading: ['Arkhip', 'ui-sans-serif'],
+      body: ['Poppins', 'ui-sans-serif'],
+    },
     colors: {
       dark: {
         DEFAULT: '#2A323B',
@@ -77,9 +81,19 @@ module.exports = {
             },
             h1: {
               color: theme('colors.dark.600'),
+              fontFamily: `${theme('fontFamily.heading')}`,
+            },
+            h2: {
+              color: theme('colors.dark.600'),
+              fontFamily: `${theme('fontFamily.heading')}`,
+            },
+            h3: {
+              color: theme('colors.dark.600'),
+              fontFamily: `${theme('fontFamily.heading')}`,
             },
             p: {
               color: theme('colors.dark.600'),
+              fontFamily: `${theme('fontFamily.body')}`,
             },
           },
         },
