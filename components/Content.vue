@@ -1,7 +1,7 @@
 <template>
   <div class="max-h-screen w-screen text-center overflow-hidden flex">
     <div
-      class="inline-flex duration-500 ease-out"
+      class="inline-flex duration-700 ease-in-out"
       style="width: 300vw"
       :style="pageTranslationX"
     >

@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="font-body">
     <Toggle :enabled.sync="isRecruiterMode">
-      <template #left>Personal Mode</template>
-      <template #right>Recruiter Mode</template>
+      <template #right>Personal Mode</template>
+      <template #left>Recruiter Mode</template>
     </Toggle>
     <slot v-if="!isRecruiterMode" name="personal" />
     <slot v-if="isRecruiterMode" name="recruiter" />
@@ -13,7 +13,7 @@
 export default {
   data() {
     return {
-      isRecruiterMode: false,
+      isRecruiterMode: true,
     }
   },
 }

@@ -16,9 +16,7 @@ For professional inquiries, LinkedIn should be ok as well, but I don’t keep up
   <template #header>Socials</template>
   <template #body>
 
-I’m not really the type to keep up with social media, but here’s an array of links for your enjoyment anyways. Maybe when I become a super-influencer one day. 
-
-Regardless, feel free to try getting in touch through some of these, but the form above will be your best bet. 
+I'll leave these here just in case, but your best bet on getting ahold of me will be the form above. 
 
   </template>
 </about-content>

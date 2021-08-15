@@ -1,6 +1,7 @@
 <template>
   <div
     class="ml-8 text-lg hover:underline hover:cursor-pointer"
+    :class="selected ? 'underline' : ''"
     @click="$emit('click')"
   >
     {{ name }}
@@ -13,6 +14,10 @@ export default {
     name: {
       type: String,
       default: 'Some Link Here',
+    },
+    selected: {
+      type: Boolean,
+      default: false,
     },
   },
   emits: ['click'],

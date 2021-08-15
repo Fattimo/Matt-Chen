@@ -1,5 +1,5 @@
 <template>
-  <div class="bold underline text-xl">
+  <div class="font-bold underline text-3xl tracking-wider font-heading mb-2">
     <router-link :to="slug"><slot /></router-link>
   </div>
 </template>

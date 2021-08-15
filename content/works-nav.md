@@ -1,6 +1,6 @@
 ---
 title: My Works Nav
-description: "All the stuff Ive made"
+description: "All the stuff I've made"
 color: "light"
 works:
   - name: Pass the Aux
@@ -11,6 +11,6 @@ works:
     slug: myriorama
 ---
 # Portfolio
-A conglomeration of all stuff I've made, from my time as a web development noob to now as a slightly more experienced developer. Everything is sorted in chronological order, so if you're here to size me up, I'd recommend sticking to the projects closer to the top:
+A list of all my works! It's sorted chronologically, so more recent projects are at the top:
 
 <works-link-list :works="works"></works-link-list>

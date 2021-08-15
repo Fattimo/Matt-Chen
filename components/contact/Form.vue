@@ -1,5 +1,5 @@
 <template>
-  <form class="flex flex-col">
+  <form class="flex flex-col font-body mb-8">
     <label for="name">Name</label>
     <input id="name" type="text" name="name" placeholder="Your name..." />
 
