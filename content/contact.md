@@ -1,5 +1,6 @@
 ---
 title: Contact Me
+id: contact
 description: 'I want to hear from you!!'
 color: "light"
 font: "primary"

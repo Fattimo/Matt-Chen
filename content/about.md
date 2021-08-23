@@ -1,5 +1,6 @@
 ---
 title: About Me
+id: about
 description: 'idk matt chen yay'
 color: "primary"
 font: "light"

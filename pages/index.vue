@@ -21,9 +21,25 @@ export default {
     const portfolio = pageContents.shift()
     return { portfolio, pageContents }
   },
-  computed: {
-    page() {
-      switch (this.$route.path) {
+  data() {
+    return {
+      page: this.calculatePageFromPath(this.$route.path),
+    }
+  },
+  watch: {
+    $route(to, from) {
+      // set the page
+      this.page = this.calculatePageFromPath(to.path)
+      // set the scroll on the hash
+      this.scrollToHash(to.hash)
+    },
+  },
+  mounted() {
+    this.scrollToHash(this.$route.hash)
+  },
+  methods: {
+    calculatePageFromPath(path) {
+      switch (path) {
         case '/works':
           return 1
         case '/about':
@@ -33,6 +49,20 @@ export default {
         default:
           return 0
       }
+    },
+    scrollToHash(hash) {
+      if (!hash) {
+        return
+      }
+      const worksBox = document.getElementById('works_ext')
+      const hashedObject = document.querySelector(hash)
+      if (!worksBox || !hashedObject) {
+        return
+      }
+      worksBox.scrollTo({
+        top: hashedObject.offsetTop + hashedObject.offsetParent.offsetTop - 20,
+        behavior: 'smooth',
+      })
     },
   },
 }

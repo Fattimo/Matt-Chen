@@ -1,5 +1,6 @@
 ---
 title: My Works Extended
+id: works_ext
 description: "All the stuff Ive made"
 color: "dark"
 font: "light"
@@ -30,15 +31,15 @@ This is a myriorama!
   </template>
 </works-snippet>
 
-<works-snippet name="myriorama" img="me_comp.jpg">
+<works-snippet name="palooza" img="me_comp.jpg">
   <template #header>
 
-## Myriorama Maker
+## Matt's Party Palooza
 
   </template>
   <template #description>
 
-This is a myriorama!
+This is a palooza!
 
   </template>
 </works-snippet>

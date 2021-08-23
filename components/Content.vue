@@ -9,8 +9,9 @@
         <LandingPage />
       </div>
       <div
+        :id="portfolio.id"
         :key="portfolio.title"
-        class="half-screen-content pt-32 pb-12 z-10 relative overflow-x-hidden"
+        class="half-screen-content pb-12 pt-32 z-10 relative overflow-x-hidden"
         :class="getBgColor(portfolio.color)"
       >
         <CirclePortfolio />
@@ -23,6 +24,7 @@
       </div>
       <div
         v-for="content in pageContents"
+        :id="content.id"
         :key="content.title"
         class="half-screen-content pt-32 px-12 pb-12 z-10"
         :class="getBgColor(content.color)"
