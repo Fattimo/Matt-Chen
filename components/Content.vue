@@ -8,31 +8,43 @@
       <div class="w-screen bg-light z-20">
         <LandingPage />
       </div>
-      <div
-        :id="portfolio.id"
-        :key="portfolio.title"
-        class="half-screen-content pb-12 pt-32 z-10 relative overflow-x-hidden"
-        :class="getBgColor(portfolio.color)"
-      >
-        <CirclePortfolio />
-        <article
-          class="prose prose-lg z-20 px-12"
-          :class="getTextColor(portfolio.font)"
+      <perfect-scrollbar>
+        <div
+          :id="portfolio.id"
+          :key="portfolio.title"
+          class="
+            half-screen-content
+            pb-12
+            pt-32
+            z-10
+            relative
+            overflow-x-hidden
+          "
+          :class="getBgColor(portfolio.color)"
         >
-          <nuxt-content :document="portfolio" />
-        </article>
-      </div>
-      <div
+          <CirclePortfolio />
+          <article
+            class="prose prose-lg z-20 px-12"
+            :class="getTextColor(portfolio.font)"
+          >
+            <nuxt-content :document="portfolio" />
+          </article>
+        </div>
+      </perfect-scrollbar>
+      <perfect-scrollbar
         v-for="content in pageContents"
         :id="content.id"
         :key="content.title"
-        class="half-screen-content pt-32 px-12 pb-12 z-10"
-        :class="getBgColor(content.color)"
       >
-        <article class="prose prose-lg" :class="getTextColor(content.font)">
-          <nuxt-content :document="content" />
-        </article>
-      </div>
+        <div
+          class="half-screen-content pt-32 px-12 pb-12 z-10"
+          :class="getBgColor(content.color)"
+        >
+          <article class="prose prose-lg" :class="getTextColor(content.font)">
+            <nuxt-content :document="content" />
+          </article>
+        </div>
+      </perfect-scrollbar>
     </div>
   </div>
 </template>

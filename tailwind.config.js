@@ -70,8 +70,20 @@ module.exports = {
       transitionDelay: {
         [`1500`]: '1500ms',
       },
+      keyframes: {
+        'slide-right': {
+          '0%': { transform: 'translateX(0px)' },
+          '100%': { transform: 'translateX(50vw)' },
+        },
+        'return-right': {
+          '100%': { transform: 'translateX(0px)' },
+          '0%': { transform: 'translateX(50vw)' },
+        },
+      },
       animation: {
         'spin-slow': 'spin 40s linear infinite',
+        'slide-right': 'slide-right .5s linear',
+        'return-right': 'return-right .5s ease-out',
       },
       typography: (theme) => ({
         DEFAULT: {

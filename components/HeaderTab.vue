@@ -1,6 +1,6 @@
 <template>
   <div
-    class="ml-8 text-lg hover:underline hover:cursor-pointer"
+    class="text-lg hover:underline hover:cursor-pointer"
     :class="selected ? 'underline' : ''"
     @click="$emit('click')"
   >

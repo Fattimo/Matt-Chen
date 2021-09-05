@@ -31,7 +31,9 @@ export default {
       // set the page
       this.page = this.calculatePageFromPath(to.path)
       // set the scroll on the hash
-      this.scrollToHash(to.hash)
+      if (process.client) {
+        this.scrollToHash(to.hash)
+      }
     },
   },
   mounted() {

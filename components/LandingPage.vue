@@ -40,11 +40,15 @@
       <div class="absolute inset-y-0 left-64 z-30 h-screen flex items-center">
         <div class="text-left font-heading">
           <h1 class="text-7xl p-2 m-1 w-max">Hello!! <br />I'm Matt</h1>
-          <p class="p-2 m-1 w-max text-3xl">
+          <p class="p-2 m-1 w-max text-2xl font-body">
             I like to make <br />
             full-stack web apps<br />
             <br />
-            <span @click="nextPage()">Click here to learn more!</span>
+            <span
+              class="font-heading cursor-pointer hover:underline text-3xl"
+              @click="nextPage()"
+              >Click here to learn more!</span
+            >
           </p>
         </div>
       </div>
