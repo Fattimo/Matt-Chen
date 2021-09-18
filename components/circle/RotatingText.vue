@@ -1,6 +1,17 @@
 <template>
   <div
-    class="2xl:w-280 2xl:h-280 lg:w-480 lg:h-480 z-10 font-heading"
+    class="
+      2xl:w-360
+      2xl:h-360
+      lg:w-480
+      lg:h-480
+      w-440
+      h-440
+      z-10
+      font-heading
+      sm:opacity-100
+      opacity-50
+    "
     :class="fontColor"
   >
     <svg viewBox="0 0 200 200" class="animate-spin-slow">

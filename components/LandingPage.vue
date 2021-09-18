@@ -1,32 +1,28 @@
 <template>
-  <div id="title" class="w-screen overflow-hidden">
+  <div id="title" class="md:w-screen overflow-hidden">
     <div
       id="background-wrapper"
-      class="absolute w-screen h-screen overflow-hidden"
+      class="
+        max-w-screen
+        md:w-screen
+        md:h-screen
+        overflow-hidden
+        flex flex-col
+        md:flex-row
+        relative
+        pb-12
+        md:pb-0
+      "
     >
       <div
         class="
           absolute
           inset-y-0
-          -right-20
+          -right-8
+          md:right-48
+          2xl:right-auto
           my-auto
-          overflow-hidden
-          flex
-          justify-center
-          items-center
-          z-20
-        "
-      >
-        <CircleImageBackground />
-        <CircleImage />
-      </div>
-      <div
-        class="
-          absolute
-          inset-y-0
-          right-48
-          my-auto
-          overflow-hidden
+          md:overflow-hidden
           flex
           justify-center
           items-center
@@ -37,10 +33,33 @@
           >Hello I'm Matt!!</CircleRotatingText
         >
       </div>
-      <div class="absolute inset-y-0 left-64 z-30 h-screen flex items-center">
-        <div class="text-left font-heading">
-          <h1 class="text-7xl p-2 m-1 w-max">Hello!! <br />I'm Matt</h1>
-          <p class="p-2 m-1 w-max text-2xl font-body">
+      <div
+        class="
+          m-12
+          md:ml-20
+          lg:ml-64
+          z-30
+          md:h-screen
+          flex
+          items-center
+          mt-32
+          md:mt-0
+        "
+      >
+        <div
+          class="
+            flex flex-col
+            md:items-start
+            items-end
+            text-right
+            md:text-left
+            font-heading
+            mt-16
+            md:mt-0
+          "
+        >
+          <h1 class="text-7xl w-max">Hello!! <br />I'm Matt</h1>
+          <p class="p-3w-max text-2xl font-body">
             I like to make <br />
             full-stack web apps<br />
             <br />
@@ -51,6 +70,22 @@
             >
           </p>
         </div>
+      </div>
+      <div
+        class="
+          relative
+          my-auto
+          overflow-hidden
+          flex
+          self-end
+          justify-center
+          items-center
+          z-20
+          flex-shrink-0
+        "
+      >
+        <CircleImageBackground />
+        <CircleImage />
       </div>
     </div>
   </div>

@@ -1,43 +1,20 @@
 <template>
-  <div class="max-h-screen w-screen text-center overflow-hidden flex">
+  <div class="md:max-h-screen md:w-screen text-center overflow-hidden flex">
     <div
-      class="inline-flex duration-700 ease-in-out"
+      class="flex md:flex-row flex-col duration-700 ease-in-out"
       style="width: 300vw"
       :style="pageTranslationX"
     >
-      <div class="w-screen bg-light z-20">
+      <div class="md:w-screen bg-light z-20">
         <LandingPage />
       </div>
-      <perfect-scrollbar>
-        <div
-          :id="portfolio.id"
-          :key="portfolio.title"
-          class="
-            half-screen-content
-            pb-12
-            pt-32
-            z-10
-            relative
-            overflow-x-hidden
-          "
-          :class="getBgColor(portfolio.color)"
-        >
-          <CirclePortfolio />
-          <article
-            class="prose prose-lg z-20 px-12"
-            :class="getTextColor(portfolio.font)"
-          >
-            <nuxt-content :document="portfolio" />
-          </article>
-        </div>
-      </perfect-scrollbar>
       <perfect-scrollbar
         v-for="content in pageContents"
         :id="content.id"
         :key="content.title"
       >
         <div
-          class="half-screen-content pt-32 px-12 pb-12 z-10"
+          class="md:half-screen-content pt-16 md:pt-32 px-12 pb-12 z-10"
           :class="getBgColor(content.color)"
         >
           <article class="prose prose-lg" :class="getTextColor(content.font)">
@@ -59,10 +36,6 @@ export default {
     pageContents: {
       type: Array,
       default: () => [],
-    },
-    portfolio: {
-      type: Object,
-      default: () => {},
     },
   },
   computed: {
@@ -100,17 +73,3 @@ export default {
   },
 }
 </script>
-
-<style>
-.half-screen-content {
-  @apply w-screen-1/2 flex-col min-h-screen text-left overflow-auto;
-}
-
-.flex-center {
-  @apply flex justify-center items-center;
-}
-
-#background-wrapper {
-  padding: 15.625vw 6.25vw 6.25vw;
-}
-</style>

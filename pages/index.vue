@@ -1,11 +1,7 @@
 <template>
   <div>
     <Header :page="page" />
-    <nuxt-child
-      :page="page"
-      :page-contents="pageContents"
-      :portfolio="portfolio"
-    />
+    <nuxt-child :page="page" :page-contents="pageContents" />
   </div>
 </template>
 
@@ -18,8 +14,7 @@ export default {
       $content('about').fetch(),
       $content('contact').fetch(),
     ])
-    const portfolio = pageContents.shift()
-    return { portfolio, pageContents }
+    return { pageContents }
   },
   data() {
     return {

@@ -10,3 +10,15 @@
   font-family: 'Arkhip';
   src: url('~/assets/fonts/arkhip_font.ttf') format('truetype');
 }
+
+@layer components {
+  @responsive{
+    .half-screen-content {
+      @apply w-screen-1/2 flex-col min-h-screen text-left overflow-auto;
+    }
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }  
+}

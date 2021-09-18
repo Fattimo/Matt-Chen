@@ -1,67 +1,78 @@
 <template>
-  <div>
-    <!-- todo: transition colors -->
-    <div class="flex absolute z-40 font-heading top-14">
-      <div class="inline w-screen-1/2" @click="setPage('/')">
-        <span
-          class="ml-12 cursor-pointer hover:underline"
-          :class="{
-            'opacity-30': leftScrolled,
-            [logoColorFromPage]: 1,
-          }"
-          >Matt Chen Placeholder Logo</span
-        >
-      </div>
-      <div
-        class="
-          flex flex-end
-          w-screen-1/2
-          items-center
-          justify-between
-          overflow-hidden
-        "
-        :class="tabColorFromPage"
+  <div class="flex md:absolute z-40 font-heading top-14 fixed">
+    <div class="inline md:w-screen-1/2" @click="setPage('/')">
+      <span
+        class="ml-12 cursor-pointer hover:underline"
+        :class="{
+          'opacity-30': leftScrolled,
+          [logoColorFromPage]: 1,
+        }"
+        >Matt Chen Placeholder Logo</span
       >
-        <div class="overflow-hidden flex-grow ml-12">
-          <div
-            class="flex justify-around items-center flex-grow"
-            :class="{
-              'animate-slide-right': rightScrolled,
-              'animate-return-right': !rightScrolled,
-              invisible: rightHidden,
-              //[burgerColorFromPage]: !rightHidden,
-            }"
-          >
-            <header-tab
-              name="My Works"
-              :selected="page === 1"
-              @click="setPage('works')"
-            />
-            <header-tab
-              name="About Me"
-              :selected="page === 2"
-              @click="setPage('about')"
-            />
-            <header-tab
-              name="Contact Me"
-              :selected="page === 3"
-              @click="setPage('contact')"
-            />
-          </div>
-        </div>
-        <button
-          class="hamburger hamburger--elastic mr-12"
-          :class="!rightScrolled ? 'is-active' : ''"
-          type="button"
-          @click="toggleRight()"
+    </div>
+    <div
+      class="
+        flex flex-end
+        md:flex-row
+        flex-col-reverse
+        min-h-screen
+        md:min-h-0
+        md:w-screen-1/2
+        md:items-center
+        items-end
+        justify-between
+        overflow-hidden
+      "
+      :class="tabColorFromPage"
+    >
+      <div class="overflow-hidden flex-grow ml-12">
+        <div
+          class="
+            flex
+            md:flex-row
+            flex-col
+            justify-around
+            items-center
+            flex-grow
+            min-h-full
+          "
+          :class="{
+            'animate-slide-right': rightScrolled,
+            'animate-return-right': !rightScrolled,
+            //[backgroundColorFromPage]: !rightScrolled,
+            invisible: rightHidden,
+            //[burgerColorFromPage]: !rightHidden,
+          }"
         >
-          <span class="hamburger-box">
-            <span :class="burgerColorFromPage">
-              <span class="hamburger-inner"></span>
-            </span>
-          </span>
-        </button>
+          <header-tab
+            name="My Works"
+            :selected="page === 1"
+            @click="setPage('works')"
+          />
+          <header-tab
+            name="About Me"
+            :selected="page === 2"
+            @click="setPage('about')"
+          />
+          <header-tab
+            name="Contact Me"
+            :selected="page === 3"
+            @click="setPage('contact')"
+          />
+        </div>
       </div>
+      <button
+        class="hamburger hamburger--elastic md:mr-12"
+        :class="!rightScrolled ? 'is-active' : ''"
+        type="button"
+        @click="toggleRight()"
+      >
+        <span class="hamburger-box">
+          <span :class="burgerColorFromPage">
+            <span class="hamburger-inner"></span>
+          </span>
+        </span>
+      </button>
     </div>
   </div>
 </template>
@@ -111,6 +122,18 @@ export default {
           return 'bg-primary'
         default:
           return 'bg-dark'
+      }
+    },
+    backgroundColorFromPage() {
+      switch (this.page) {
+        case 2:
+          return 'bg-primary'
+        case 4:
+          return 'bg-secondary'
+        case 1:
+          return 'bg-dark'
+        default:
+          return 'bg-light'
       }
     },
   },

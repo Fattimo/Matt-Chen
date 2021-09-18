@@ -51,6 +51,7 @@ module.exports = {
         280: '50rem',
         320: '55rem',
         360: '60rem',
+        440: '70rem',
         480: '75rem',
       },
       height: {
@@ -61,7 +62,11 @@ module.exports = {
         280: '50rem',
         320: '55rem',
         360: '60rem',
+        440: '70rem',
         480: '75rem',
+      },
+      maxWidth: {
+        screen: '100vw',
       },
       borderWidth: {
         100: '10rem',
