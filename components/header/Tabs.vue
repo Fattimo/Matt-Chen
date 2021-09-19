@@ -1,16 +1,15 @@
 <template>
   <div
     class="
-      flex flex-end
+      flex flex-end flex-col-reverse
       md:flex-row
-      flex-col-reverse
-      min-h-screen
-      md:min-h-0
       md:w-screen-1/2
       md:items-center
       items-end
       justify-between
       overflow-hidden
+      pt-1
+      md:pt-0
     "
     :class="fontColor"
   >
@@ -33,11 +32,16 @@
           items-center
           flex-grow
           min-h-full
+          md:bg-transparent
+          bg-light
+          p-4
+          md:p-0
         "
         :class="{
           'animate-slide-right': !expanded,
           'animate-return-right': expanded,
           invisible: hidden,
+          hidden: hidden,
           //[burgerColorFromPage]: !rightHidden,
         }"
       >

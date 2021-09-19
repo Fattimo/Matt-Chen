@@ -72,6 +72,9 @@ module.exports = {
         100: '10rem',
         200: '200px',
       },
+      backgroundColor: {
+        transparent: 'transparent',
+      },
       transitionDelay: {
         [`1500`]: '1500ms',
       },

@@ -1,5 +1,17 @@
 <template>
-  <div class="flex md:absolute z-40 font-heading top-14 fixed">
+  <div
+    class="
+      flex
+      md:absolute
+      z-40
+      font-heading
+      top-14
+      fixed
+      w-full
+      justify-around
+    "
+  >
+    <div class="absolute w-screen md:hidden pb-24 -top-14 -z-10 bg-light"></div>
     <HeaderLogo :font-color="logoColorFromPage" :dimmed="leftScrolled" />
     <HeaderTabs
       :color="tabsColorFromPage"

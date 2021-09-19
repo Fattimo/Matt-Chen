@@ -1,12 +1,13 @@
 <template>
-  <div class="inline md:w-screen-1/2" @click="setPage('/')">
+  <div class="inline md:w-screen-1/2">
     <span
-      class="ml-12 cursor-pointer hover:underline"
+      class="ml-6 md:ml-12 cursor-pointer hover:underline"
       :class="{
         'opacity-30': dimmed,
         [bgColor]: true,
         [fontColor]: true,
       }"
+      @click="setPage('/')"
       >Matt Chen Placeholder Logo</span
     >
   </div>
