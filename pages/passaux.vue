@@ -1,3 +1,6 @@
 <template>
-  <div>Passaux</div>
+  <div>
+    <HeaderMain />
+    Passaux
+  </div>
 </template>

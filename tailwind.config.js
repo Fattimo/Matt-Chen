@@ -75,6 +75,9 @@ module.exports = {
       transitionDelay: {
         [`1500`]: '1500ms',
       },
+      zIndex: {
+        '-10': '-10',
+      },
       keyframes: {
         'slide-right': {
           '0%': { transform: 'translateX(0px)' },
@@ -84,11 +87,21 @@ module.exports = {
           '100%': { transform: 'translateX(0px)' },
           '0%': { transform: 'translateX(50vw)' },
         },
+        'fade-out': {
+          '100%': { opacity: 0 },
+          '0%': { opacity: 1 },
+        },
+        'fade-in': {
+          '100%': { opacity: 1 },
+          '0%': { opacity: 0 },
+        },
       },
       animation: {
         'spin-slow': 'spin 40s linear infinite',
         'slide-right': 'slide-right .5s linear',
         'return-right': 'return-right .5s ease-out',
+        'fade-out': 'fade-out .5s linear',
+        'fade-in': 'fade-in .5s linear',
       },
       typography: (theme) => ({
         DEFAULT: {

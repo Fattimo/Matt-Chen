@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header :page="page" />
+    <HeaderMain :page="page" />
     <nuxt-child :page="page" :page-contents="pageContents" />
   </div>
 </template>
