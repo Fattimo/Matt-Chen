@@ -2,10 +2,8 @@
   <div
     class="
       absolute
-      2xl:w-360
-      2xl:h-360
-      lg:w-320
-      lg:h-320
+      2xl:w-360 2xl:h-360
+      lg:w-320 lg:h-320
       w-280
       h-280
       border-100

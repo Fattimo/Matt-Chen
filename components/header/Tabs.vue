@@ -2,9 +2,7 @@
   <div
     class="
       flex flex-end flex-col-reverse
-      md:flex-row
-      md:w-screen-1/2
-      md:items-center
+      md:flex-row md:w-screen-1/2 md:items-center
       items-end
       justify-between
       overflow-hidden
@@ -26,17 +24,13 @@
     <div class="overflow-hidden flex-grow ml-12 md:hidden">
       <div
         class="
-          flex
-          md:flex-row
-          flex-col
+          flex flex-col flex-grow
+          md:flex-row md:bg-transparent md:p-0
           justify-around
           items-center
-          flex-grow
           min-h-full
-          md:bg-transparent
           bg-light
           p-4
-          md:p-0
         "
         :class="{
           'animate-slide-right': !expanded,
@@ -54,17 +48,13 @@
     <div class="overflow-hidden flex-grow ml-12 md:block hidden">
       <div
         class="
-          flex
-          md:flex-row
-          flex-col
+          flex flex-col flex-grow
+          md:flex-row md:p-0 md:bg-transparent
           justify-around
           items-center
-          flex-grow
           min-h-full
-          md:bg-transparent
           bg-light
           p-4
-          md:p-0
         "
         :class="{
           'animate-slide-right': !expanded,

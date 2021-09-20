@@ -2,12 +2,9 @@
   <div
     class="
       absolute
-      2xl:w-120
-      2xl:h-120
-      lg:w-96
-      lg:h-96
-      sm:w-72
-      sm:h-72
+      2xl:w-120 2xl:h-120
+      lg:w-96 lg:h-96
+      sm:w-72 sm:h-72
       w-60
       h-60
       rounded-full

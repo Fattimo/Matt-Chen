@@ -4,8 +4,7 @@
       id="background-wrapper"
       class="
         max-w-screen
-        md:w-screen
-        md:h-screen
+        md:w-screen md:h-screen
         overflow-hidden
         flex flex-col
         md:flex-row

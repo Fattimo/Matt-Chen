@@ -1,10 +1,8 @@
 <template>
   <div
     class="
-      2xl:w-360
-      2xl:h-360
-      lg:w-480
-      lg:h-480
+      2xl:w-360 2xl:h-360
+      lg:w-480 lg:h-480
       w-440
       h-440
       z-10
