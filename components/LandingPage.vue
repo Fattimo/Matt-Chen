@@ -69,6 +69,7 @@
               >Click here to learn more!</span
             >
           </p>
+          <p class="text-xs pt-4">Last Updated: 09/19/2021. Currently WIP</p>
         </div>
       </div>
       <div

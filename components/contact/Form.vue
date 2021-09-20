@@ -1,4 +1,5 @@
 <template>
+  <!-- https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server -->
   <form class="flex flex-col font-body mb-8">
     <label for="name">Name</label>
     <input id="name" type="text" name="name" placeholder="Your name..." />
