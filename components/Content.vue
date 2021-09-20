@@ -1,9 +1,16 @@
 <template>
   <div class="md:max-h-screen md:w-screen text-center overflow-hidden flex">
     <div
-      class="flex md:flex-row flex-col duration-700 ease-in-out"
-      style="width: 300vw"
-      :style="pageTranslationX"
+      class="
+        flex
+        md:flex-row
+        flex-col
+        duration-700
+        ease-in-out
+        md:w-special-container
+        transform
+      "
+      :class="pageTranslationX"
     >
       <div class="md:w-screen bg-light z-20">
         <LandingPage />
@@ -40,9 +47,16 @@ export default {
   },
   computed: {
     pageTranslationX() {
-      return this.page > 0
-        ? `transform:translate(-${50 * this.page + 50}vw, 0px)`
-        : ''
+      switch (this.page) {
+        case 1:
+          return 'md:translate-x-1-screen'
+        case 2:
+          return 'md:translate-x-2-screen'
+        case 3:
+          return 'md:translate-x-3-screen'
+        default:
+          return ''
+      }
     },
   },
   methods: {

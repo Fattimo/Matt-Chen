@@ -44,6 +44,7 @@ module.exports = {
     extend: {
       width: {
         'screen-1/2': '50vw',
+        'special-container': '300vw',
         120: '30rem',
         160: '35rem',
         200: '40rem',
@@ -74,6 +75,11 @@ module.exports = {
       },
       backgroundColor: {
         transparent: 'transparent',
+      },
+      translate: {
+        '1-screen': '-100vw',
+        '2-screen': '-150vw',
+        '3-screen': '-200vw',
       },
       transitionDelay: {
         [`1500`]: '1500ms',

@@ -22,7 +22,36 @@
         invisible: page === 0 || hidden || !manuallyToggled,
       }"
     ></div>
-    <div class="overflow-hidden flex-grow ml-12">
+    <!-- todo: replace this one with an actual mobile header -->
+    <div class="overflow-hidden flex-grow ml-12 md:hidden">
+      <div
+        class="
+          flex
+          md:flex-row
+          flex-col
+          justify-around
+          items-center
+          flex-grow
+          min-h-full
+          md:bg-transparent
+          bg-light
+          p-4
+          md:p-0
+        "
+        :class="{
+          'animate-slide-right': !expanded,
+          'animate-return-right': expanded,
+          invisible: hidden,
+          hidden: hidden,
+          //[burgerColorFromPage]: !rightHidden,
+        }"
+      >
+        <WorksLink slug="works_nav">My Works</WorksLink>
+        <WorksLink slug="about">About Me</WorksLink>
+        <WorksLink slug="contact">Contact Me</WorksLink>
+      </div>
+    </div>
+    <div class="overflow-hidden flex-grow ml-12 md:block hidden">
       <div
         class="
           flex
@@ -69,7 +98,7 @@
       @click="toggle"
     >
       <span class="hamburger-box">
-        <span :class="burgerColor">
+        <span class="bg-dark" :class="burgerColor">
           <span class="hamburger-inner"></span>
         </span>
       </span>
@@ -110,25 +139,25 @@ export default {
     fontColor() {
       switch (this.color) {
         case 'light':
-          return 'text-light'
+          return 'md:text-light'
         case 'primary':
-          return 'text-primary'
+          return 'md:text-primary'
         case 'secondary':
-          return 'text-secondary'
+          return 'md:text-secondary'
         default:
-          return 'text-dark'
+          return 'md:text-dark'
       }
     },
     burgerColor() {
       switch (this.color) {
         case 'light':
-          return 'bg-light'
+          return 'md:bg-light'
         case 'primary':
-          return 'bg-primary'
+          return 'md:bg-primary'
         case 'secondary':
-          return 'bg-secondary'
+          return 'md:bg-secondary'
         default:
-          return 'bg-dark'
+          return 'md:bg-dark'
       }
     },
   },

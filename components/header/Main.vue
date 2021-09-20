@@ -11,7 +11,7 @@
       justify-around
     "
   >
-    <div class="absolute w-screen md:hidden pb-24 -top-14 -z-10 bg-light"></div>
+    <!-- <div class="absolute w-screen md:hidden pb-24 -top-14 -z-10 bg-light"></div> -->
     <HeaderLogo :font-color="logoColorFromPage" :dimmed="leftScrolled" />
     <HeaderTabs
       :color="tabsColorFromPage"
@@ -44,9 +44,9 @@ export default {
       switch (this.page) {
         case 3:
         case 2:
-          return 'text-light'
+          return 'md:text-light'
         default:
-          return 'text-dark'
+          return 'md:text-dark'
       }
     },
     tabsColorFromPage() {
